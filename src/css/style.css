@@ -1,0 +1,136 @@
+:root {
+  --primary-color: #fd951f;
+  --bg-color: #130f0d;
+  --text-color: #f0f0f5;
+  --light-color: rgba(255, 255, 255, 0.4);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: 'Roboto', sans-serif;
+  height: 100%;
+}
+
+body {
+  height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+form {
+  /* cria um background com transparencia de 0.0,3 */
+  background: rgba(255, 255, 255, 0.03);
+  /* centralizar linha */
+  text-align: center;
+  /* borda curvada */
+  border-radius: 3px;
+  /* largura 100% */
+  width: 100%;
+  /* largura maxima de 90% */
+  max-width: 90%;
+  /* se for maior vai manter 90% mas a margin vai manter  */
+  margin: 32px auto;
+  /* padding 32 cima e embaixo e laterais com 64px */
+  padding: 32px 64px;
+  /* todos elementos dentro do display vai se manter alinhado um ao lado do outro */
+  display: flex;
+  /* vai padronizar a direção de cima pra baixo dos elementos */
+  flex-direction: column;
+}
+form {
+  background: rgba(255, 255, 255, 0.03);
+
+  width: 100%;
+  max-width: 500px;
+
+  margin: 32px auto;
+  padding: 32px 64px;
+
+  display: flex;
+  flex-direction: column;
+}
+
+form h2 {
+  margin-bottom: 32px;
+}
+
+div.input {
+  margin-bottom: 24px;
+  position: relative;
+}
+
+input,
+button {
+  /* reset appeareance */
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  margin-bottom: 20px;
+
+  /* box */
+  width: 100%;
+
+  padding: 16px 0;
+
+  border: none;
+  border-bottom: 1px solid var(--primary-color);
+
+  background-color: #130f0d;
+
+  outline: none;
+
+  /* text */
+  color: var(--text-color);
+  font-size: 1em;
+}
+
+button {
+  background-color: var(--primary-color);
+}
+
+input ~ label {
+  position: absolute;
+  top: 16px;
+  left: 0;
+
+  color: rgba(255, 255, 255, 0.6);
+
+  transition: 0.4s;
+}
+
+input:focus ~ label,
+input:valid ~ label {
+  transform: translateY(-34px);
+  font-size: 0.8em;
+  letter-spacing: 0.1em;
+}
+
+label {
+  transform: translateY(-34px);
+  font-size: 0.8em;
+  letter-spacing: 0.1em;
+  position: absolute;
+  top: 16px;
+  left: 0;
+
+  color: rgba(255, 255, 255, 0.6);
+
+  transition: 0.4s;
+}
+
+h3 {
+  width: 100%;
+  margin-bottom: 20px;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  word-break: break-word;
+}
